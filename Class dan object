@@ -1,0 +1,74 @@
+                                                            class dan object
+
+Class adalah sebuah wadah yg dibuat untuk menciptakan suatu object, class juga disebut sebagai sebuah konsep OOP (object oriented programing) yang digunakan untuk mencapsulasi /membungkus data dan abstraksi prosedural yang diperlukan dalam menggambarkan isi dan tingkah laku berbagai entitas. Kelas juga merupakan deskripsi tergeneralisir (misal templet, pola, cetak biru) yang menggambarkan kumpulan objek yang sama. 
+
+properti dari object tetap mengikuti classnya
+>> contoh method jika object mahasiswa = krs (mengambil mata kuliah)
+                                    = quis ujian
+
+Objek adalah digambarkan sebagai benda, orang, tempat, dan sebagainya yang ada didunia nyata yang penting bagi suatu aplikasi objek mempunyai attribut dan method.
+
+Object adalah instance dari class secara umum merepresentasikan (template) sebuah object, sebuah instance adalah representasi nyata dari class itu sendiri.
+Contoh : Dari Class Fruit kita dapat membuat object Mangga, Pisang, Apel, dan lainnya.
+
+Method adalah prosedur atau fungsi yang bergabung dalam objek bersama dengan attribut. 
+Method juga bisa digunakan untuk pengaksesan terhadap data yang terdapat dalam objek tersebut.
+
+Class orang: #nama classnya
+           def __init__(self, nama):
+                  self.nama = nama
+
+class mahasiswa : #nama class
+		def__init__(self, nama, nim): 
+                                    self.nama = nama
+                           def tampilkan(self):
+                                    print(‘Nama mahasiswa :’, self.nama)
+                                    print(‘NPM :’, self.nim)
+ 
+
+
+Attribute adalah menggambarkan data yang dapat memberikan informasi kelas atau objek dimana attribut tersebut berada. Dalam sebuah class, atribut disebut sebagai variable dan aribut dapat membedakan antara satu object dengan object yang lain, berikut ini adalah contohnya :
+
+contoh program :
+
+class User: #super class
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+
+    def printFistName(self):
+        print('Fist name:', self.fname)
+
+    def printLastName(self):
+         print('Last name:', self.lname)
+
+    def printFullName(self):
+         print('Full name:', self.fname, self.lname)
+
+class Programmer(User): # anak dari class
+    def doPython(self):
+        print('Programing Python')
+
+
+objek1 = User('Ahmad', '-')
+objek1.printFistName()
+objek1.printLastName()
+objek1.printFullName()
+print('---')
+objek2 = Programmer('Andika', 'Aditya Harun')
+objek2.printFistName()
+objek2.printLastName()
+objek2.printFullName()
+objek2.doPython()
+-----------------------------------------------------
+class dan object
+
+- yang di lakukan method >> properti seperti accesories dan menganalisis.
+>>method, artinya mau memperkerjakan/melakukan/mengolah
+>> menampilkan data adalah method.
+
+>>cara mengakses method menggunakan titik (atau dot ( . ))
+>>instalasi object (membuat object dari sebuah class)
+
+class adalah code template untuk men create suatu object dan memiliki prilaku
+object adalah hasil ciptaan dari class

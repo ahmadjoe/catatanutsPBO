@@ -1,0 +1,31 @@
+                                                            Encapsulation
+Encapsulation adalah pembungkus, encapsulation pada object oriented adalah membungkus class dan menjaga apa apa saja yang ada didalam class tersebut baik method ataupun atribut, agar tidak dapat di akses oleh class lainnya.
+
+Dalam sebuah encapsulation dikenal nama Hak Akses Modifier yang terdiri dari Private. Public dan Protected. Dalam sebuah objek yang mengandung variabel-variabel dan method-method, dapat ditentukan hak akses pada sebuah variabel atau method dari objek. Pembungkusan variabel dan method dalam sebuah objek dalam bagian yang terlindungi inilah yang disebut dengan enkapsulasi.
+
+Bagian eksternal dari sebuah objek sering disebut sebagai interface atau antarmuka terhadap objek lain. Karena objek lain harus berkomunikasi dengan obejk itu hanya melalui antarmuka maka bagian internal objek dapat dilindungi dari gangguan luar. Karena program luar tidak mengakses implementasi internal objek, maka implementasi internal dapat berubah tanpa mempengaruhi bagian-bagian program lain.
+
+Cara mengakses atribut private di luar class adalah   
+Berikut adalah contoh programnya :
+
+class kubus:
+    __sisi=0
+    def __init__(self):
+        self.__sisi = 50 
+
+    def getSisi(self):
+        print(self.__sisi) 
+    def setSisi(self,s):
+        self.__sisi=s 
+    def __update(self): 
+        print("50")
+                
+kub=kubus()
+kub.getSisi()
+kub.setSisi(4)
+kub._kubus__update()
+
+kita dapat membatasi akses ke metode dan variabel. 
+data ini bisa mencegah data dari modifikasi langsung yang disebut enkapsulasi
+Konsep ini sedikit rumit untuk dijelaskan.
+

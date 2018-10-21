@@ -1,0 +1,67 @@
+                                                        Overloading dan overriding
+Overloading merupakan salah satu konsep dalam pemrogramaan berorientasi objek dimana dalam suatu class terdapat method dengan nama yang sama namun tetapi memiliki berbagai fungsi yang berbeda, tergantung dari parameter yang digunakan.
+
+Operator dan method overloading ?
+
+Operator overloading adalah menampakkan operatornya yg banyak artinya
+Operator overloading adalah teknik di mana operator yang digunakan dalam sebuah bahasa pemrograman yang di implementasikan dalam jenis yang ditentukan pengguna dengan logika yang disesuaikan yang didasarkan pada jenis argumen yang dilewati.
+
+Method overloading adalah sebuah method dengan multiple cara untuk memanggil boleh dengan beda parameter atau dengan function yang di definisikan. 
+Pada method overloading perbedaan parameter mencakup :
+1.	Jumlah parameter 
+2.	Tipe data dari parameter
+3.	Urutan dari tipe data parameter
+Method Overloading juga dikenal dengan sebutan Static Polymorphism. Berikut ini contoh Class yang melakukan Overloading. Dalam penurunan kelas kita bisa melakukan penggantian metode orang-tua (parents) di kelas anak (children). Caranya mudah sekali cukup tulis ulang nama metodenya yang sama seperti ini contohnya:
+
+Contoh program:
+class Vektor:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b     
+
+    def __str__(self):
+        return 'Vektor (%d, %d)' % (self.a, self.b)
+        
+    def _add__(self, other):
+        return Vektor(self.a + other.a, self.b + other.b)
+
+v1 = Vektor (5,4)
+v2 = Vektor (7, -2)
+print (1)
+print (v2)
+print (v1 + v2)
+
+- Overriding
+
+Overriding merupakan method yang parrent class yang ditulis kembali oleh subclass. Override adalah bagian yang sangat penting dari OOP karena ini adalah fitur yang membuat warisan mengeksploitasi kekuatan penuhnya. Melalui metode yang mengesampingkan kelas dapat "menyalin" kelas lain, menghindari kode duplikat, dan pada saat yang sama meningkatkan atau menyesuaikan sebagian darinya. Metode yang menimpa demikian merupakan bagian yang ketat dari mekanisme pewarisan.
+1.	Parameter yang terdapat pada method overriding di subclass harus sama dengan parameter yang terdapat pada parent class.
+2.	Aturan hak akses, hak akses method overriding di subclass tidak boleh lebih ketat di 
+bandingkan dengan hak akses method pada parent class.
+
+Method overriding memiliki banyak macam tapi isinya berbeda 
+Berikut ini contoh overriding :
+
+Contoh program
+
+class Rectangle():
+	def __init__(self,length,breadth):
+		self.length = length
+		self.breadth = breadth
+
+	def getArea(self):
+		print (self.length*self.breadth," is area of rectangle")
+
+class Square(Rectangle):
+	def __init__(self,side):
+		self.side = side
+		Rectangle.__init__(self,side,side)
+
+	def getArea(self):
+		print (self.side*self.side," is area of square")
+
+s = Square(4)
+r = Rectangle(2,4)
+
+s.getArea()
+r.getArea()
+

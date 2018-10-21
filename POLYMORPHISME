@@ -1,0 +1,26 @@
+                                                        POLYMORPHISME
+                                                        
+Polymorphism adalah suatu aksi yang memungkinkan pemrogram menyampaikan pesan tertentu keluar dari bentuk obyeknya, dimana obyek yang berbeda memberikan tanggapan/respon terhadap pesan yang sama sesuai dengan sifat masing-masing obyek.
+
+Polymorphism adalah kemampuan suatu objek untuk mengambil banyak bentuk. 
+
+Polymorphism berarti memiliki banyak bentuk, tidak terhubung pada  satu class induk, namun ia mempunyai class sendiri - sendiri
+
+berikut adalah contoh program
+
+class Bear():
+	def sound(self):
+		print("Groarrr")
+        
+class Dog():
+	def sound(self):
+		print("Woof woof!")
+
+def makeSound(animal):
+    animal.sound()
+    
+bearObject = Bear()
+dogObject = Dog()
+makeSound(bearObj)
+makeSound(dogObj)   
+
